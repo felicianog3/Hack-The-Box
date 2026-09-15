@@ -11,3 +11,161 @@ Cyber Kill Chain is a framework created by Lockheed Martin in 2011 and used to m
 Cyber Kill Chain is important for the SOC analyst to have a better understanding of the stages of a cyber attack and to determine which action(s) the cyber attack starts with and which action(s) follows. The SOC analyst can use Cyber Kill Chain to analyze where in the cyber attack the acts of the attacker noticed on the systems occur. The Cyber Kill Chain enables the organization to determine where and how severe the security flaws are. Blueteams can identify areas where security measures are lacking based on these flaws and take the appropriate actions.
 
 The Cyber Kill Chain and its significance are briefly discussed in this section of the module. The "Cyber Kill Chain Steps" are explained in the next section.
+
+
+# Cyber Kill Chain Steps
+There are several actions that an attacker can take before, during, and after a successful cyber attack. These actions are sequential, and if the attacker fails at one stage, it is not possible to execute the next step of the cyber attack. The Cyber Kill Chain model divides these stages of attackers into 7 steps. The steps of cyber attacks are depicted in the visual below:
+
+1. Reconnaissance
+2. Weaponization
+3. Delivery
+4. Exploitation
+5. Installation
+6. Command & Control (C2)
+7. Actions on Objectives
+
+The steps in the Cyber Kill Chain are discussed in this section. In the next sections, each Cyber Kill Chain step is explained under distinct categories. In the following section, the topic "Reconnaissance" is covered.
+
+# Reconnaissance
+The Cyber Kill Chain begins with the "Reconnaissance" step. The attacker attempts to obtain information about the target system at this step. The more knowledge an attacker has about the target system, the more the attack surface seems to him. Attack vectors for the target are disclosed in this way. The techniques employed at this stage may be divided into two subcategories:
+
+1. Passive Reconnaissance
+2. Active Reconnaissance
+
+The term "Passive Reconnaissance" refers to the collecting of information from sources about the target system without physically engaging with the target system. As an instance of this, Web archive websites can be used to obtain information that is no longer available on the target system's website.
+
+"Active Reconnaissance" refers to the method of acquiring information about a target system by engaging with it directly. By submitting a request to a web server, for instance, version information about the web server may be acquired from the response.
+
+### Adversary
+* The attacker can gather information from a variety of sources using a variety of approaches during the "Reconnaissance" process. At this phase, the attacker can perform the following operations:
+
+* Obtaining version information of servers and software belonging to the target
+
+* Obtaining information from open sources of information about the target has previously been released
+
+* Obtaining e-mail addresses of employees of the organization
+
+* Obtaining internal or personal information about employees of the organization using social networking platforms
+
+* Detection of devices that are connected to the Internet
+
+* Detection of security vulnerabilities on servers open to access on the Internet
+
+* Identifying the IP address block belonging to the organization
+
+* Identification of vendors that the organization cooperates with
+### Defender
+Blueteams may take action in response to attackers' attempts at this stage. This reduces the amount of information that an attacker can obtain. Some methods that SOC analysts and blueteams can implement are listed below:
+
+* Detection of areas of information disclosure with external pentest
+
+* Obtaining leak information about the organization from Threat Intelligence sources
+
+* Not to keep the documents providing organizational information available on the internet
+
+* Monitoring traffic by installing security solutions such as firewalls in areas of the company that are accessible over the internet
+
+* Instantly updating to avoid new security vulnerabilities from being exploited
+
+The first phase of the Cyber Kill Chain, the "Reconnaissance" step, is discussed in this section, along with some actions that attackers can take and some precautions that Blueteams can adopt at this stage. "Weaponization" is explained in the following section of the module.
+
+# Weaponization
+The "Weaponization" is the second step in the Cyber Kill Chain. At this stage, the attacker uses the information obtained in the previous stage to access the tools needed for the attack or develops the tool/script directly. At this stage, preparation for a cyber-attack may differ depending on the sort of attack. For example, if a phishing-type cyber attack is to be carried out, an exploit can be constructed in response to a recognized security vulnerability, or malicious email content can be generated. If the tools for the cyber attack are ready, the attacker completes this phase quickly and moves on to the next phase of the cyber attack. At this point, the attack has not yet commenced, and the victim is generally unaware of the attacker.
+
+### Adversary
+The attacker might build many alternative attack techniques or prepare the essential components for a cyber attack during the "Weaponization" process. The following are some of the processes that the attacker might employ at this stage:
+
+* Creating malware
+
+* Developing exploits
+
+* Creating malicious content for use in a phishing attempt (such as an email template and a malicious document).
+
+* Identifying the best instrument for the cyber attack
+
+### Defender
+It is not possible for SOC analysts and Blueteams to directly prevent the attack preparations of attackers at this stage. However, some measures can be taken, albeit limited. Some of these measures are as follows:
+
+* Checking the systems on a regular basis to see if any identified security vulnerabilities exist.
+
+* Installing security updates for the systems of the institutions as soon as possible
+
+* Analyzing the impact of known or newly produced cyber attack tools on systems by tracking the known or newly developed attack tools and therefore being able to detect when the tool is utilized
+
+The "Weaponization" step, which is the second step in the Cyber Kill Chain, is explained in this section, along with some of the actions that attackers can take and some measures that Blueteams can take at this stage. In the following section, the "Delivery" step is explained.
+
+# Delivery
+The third step of the Cyber Kill Chain is the "Delivery" stage. At this stage, the attacker executes the cyber attack that he prepared for in the preceding phases. This is the stage where the first interaction with the victim happens. For instance, malware is uploaded to the proper environment at this step, and the victim downloads the malware from the uploaded environment to their systems. Malicious content can be conveyed to the victims' devices in various ways during the delivery phase. The methods used for delivering malicious content may differ depending on the type of attack. For instance, using email for a phishing attack may be preferred, or the malicious content in the email can be uploaded to a web address.
+
+### Adversary
+In the "Delivery" stage, the attacker can deliver a variety of cyber weapons to the victim via a variety of methods. At this stage, the attacker can carry out the following operations:
+
+* Delivering a malicious URL via email
+
+* Delivering malware as a file attachment via email
+
+* Delivering malware through the website
+
+* Delivering the malicious URL via social media
+
+* Delivering malware via social media
+
+* Uploading the malware directly to the target server (if direct access to the server is possible)
+
+* Physically installing or enabling the installation of malware directly to the target system via a USB device
+
+### Defender
+Blueteams and individual users can take plenty of precautionary measures at this stage. Although they cannot totally prevent the cyber attack from occurring, these precautions can drastically minimize the risk of a successful cyber attack. Some of these measures are listed below:
+
+* Adopting a skeptical attitude towards URLs in email content and viewing them in a sandbox environment
+
+* Scanning the email's attachments using antivirus software
+
+* Using email security solution products in organizations
+
+* Ensuring that users/institutional employees receive training on information security
+
+* Constant monitoring of server access and recording of logs
+
+* Effective use and management of security solutions such as Firewall
+
+* Conducting detailed analysis of suspicious activities when needed
+
+* Detecting anomalies and determining the initial reason
+
+The third phase of the Cyber Kill Chain, the "Delivery" step, is discussed in this section, along with some of the activities that attackers can take at this level and some of the steps that Blueteams can take at this stage. The "Exploitation" step is defined in the next section of the module.
+
+# Exploitation
+The fourth step of the Cyber Kill Chain is the "Exploitation" stage. The attacker ensures that the malicious content provided to the victim in the previous step gets activated in this stage. During the exploitation step, the process of running the malware transmitted to the victim's device is carried out. The initial operation in the system is performed by the attacker at this stage. The exploit operation performed here is a precursor of the attack activities that will be carried out in the subsequent phases. The next phases of the cyber attack cannot be carried out if the exploit fails here for a reason, or if the delivered malware cannot be run.
+
+### Adversary
+The attacker has some basic knowledge about the program or system intended to be exploited in the target and has prepared the appropriate attack tools beforehand in the "Exploitation" stage. This is the step the attacker's exploit or tool is run/tested. This step may be failed if the exploit or tool is not suitable to be utilized on the victim's system. At this level, the attacker can perform the following operations:
+
+* Executing the exploit that exploits the hardware vulnerability
+
+* Executing the exploit that exploits the vulnerability of the software or operating system
+
+* Running malware
+
+### Defender
+Defending against exploitation poses a significantly more intricate and labor-intensive task for Blueteams compared to other stages. This is primarily due to the potential encounter with previously unseen malware or exploits, which adds a layer of complexity to the defense process. To elucidate, the use of zeroday exploits can complicate the detection and prevention procedures during this phase. The following points may be considered to detect and prevent malicious activities:
+
+* Training the employees of the organization on when it is/is not necessary to open a file uploaded on the systems and what issues should be considered
+
+* Constantly monitoring system security operations on the assets belonging to the organization and detecting anomalies
+
+* Tracking the security vulnerabilities published for the assets belonging to the organization, writing the appropriate monitoring rule, and detecting them when they are exploited
+
+* Following the security updates of the assets belonging to the organization and installing them immediately
+
+* Monitoring activities on endpoints using EDR products
+
+* Providing secure coding training to software developers in order to prevent security vulnerabilities in locally developed applications
+
+* Conducting pentests on assets of the organization on a regular basis
+
+* Regular automated vulnerability scanning and monitoring of reports
+
+* Organizing the authorizations on the assets belonging to the institution and giving each account the authority needed
+
+The "Exploitation" phase, which is the fourth step in the Cyber Kill Chain, is covered in this section, along with some activities that attackers can take in this step and some measures that Blueteams can perform at this stage. The "Installation" step is explained in the following section of the module.
