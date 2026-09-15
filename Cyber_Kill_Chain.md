@@ -169,3 +169,60 @@ Defending against exploitation poses a significantly more intricate and labor-in
 * Organizing the authorizations on the assets belonging to the institution and giving each account the authority needed
 
 The "Exploitation" phase, which is the fourth step in the Cyber Kill Chain, is covered in this section, along with some activities that attackers can take in this step and some measures that Blueteams can perform at this stage. The "Installation" step is explained in the following section of the module.
+
+# Installation
+The fifth phase of the Cyber Kill Chain is the "Installation" phase. At this stage, the attacker attempts to maintain persistence on the target system that was exploited. The attacker attempts to gain an access path that can be accessed at any time by installing a backdoor on the system. Because the exploited vulnerability will be patched and rendered inoperable after a certain time, the attacker must use a different method to gain access to the target system. At this point, the malware to be installed on the target device can alternatively be placed with the help of a dropper. At this point, the attacker may attempt to acquire access to a highly authorized user account in the system via privilege escalation tactics in order to assure system persistence. This is the stage at which attack preparations are carried out to achieve the ultimate aims once the cyber attack has begun.
+
+### Adversary
+In the "Installation" step, an attacker can perform a wide range of operations. The attacker can successfully perform various technological activities provided that they are constrained to their authority in the system they exploit. While performing these operations, the attacker tries to leave as few traces as possible on the system and ensure that security products do not interfere with the operations. In this manner, the attacker can remain undetected on the system for a longer period, gaining the required time to carry out the attack. At this stage, the attacker can perform the following actions:
+
+* Install malware on the victim's device.
+
+* Placing a backdoor on the victim's system
+
+* Install web shell on the web server (if it is a web server).
+
+* Adding a service, firewall rule, or scheduled task to ensure the persistence of the victim device
+
+### Defender
+The operations that Blueteams apply against attackers at this stage consist of the operations of Threat Hunting. The fact that an attacker who reached this stage is performing malicious activities on the systems indicates that the attacker cannot be detected. Therefore, whether the attacker is present or not, the SOC team should manage and execute security operations under the assumption that there is always an attacker present in the system. Security operations that can be performed at this level will depend on the current structure. The following are some activities that can be taken generally:
+
+* To carry out Network Security Monitoring operations on all assets of the organization
+
+* Using EDR security solutions to be aware of configuration changes applied on each endpoint
+
+* Restricting access to critical files on systems and monitoring access
+
+* Restricting access to critical paths on systems and monitoring access
+
+* To allow the use of admin privileges only for mandatory situations by making authorization arrangements for users on the systems
+
+* Detecting malicious process activities by monitoring the processes running on the systems
+
+* Allowing only executable files with a valid signature to be run on the system
+
+* Detect anomalies in all monitored system activities and find the root cause
+
+The fifth phase of the Cyber Kill Chain, the "Installation" step, is covered in this section, along with some activities that attackers can take and some measures that Blueteams can perform at this stage. "Command and Control (C2)" is explained in the following section.
+# Command and Control (C2)
+The sixth stage of the Cyber Kill Chain is the "Command and Control (C2)" step. At this point, the attacker has completed several crucial tasks of the attack and has prepared the Command and Control (C2) server to deliver commands to the system. The attacker can send remote commands to the system and execute them at this step.
+
+### Adversary
+In the "Command and Control (C2)" stage, what the attacker does is establish contact between C2 and the target system. This stage does not include the execution of the actions targeted by the attacker. Once the C2 communication is complete, the attacker will proceed to carry out malicious activities.
+
+Briefly, what the attacker does at this stage is as follows:
+
+* Configuring C2 Server to communicate with the victim
+
+* Implementing the necessary actions on the victim's device to make its contact with C2 possible.
+
+### Defender
+Although there is no specific action for blue teams at this stage, general security monitoring and detection techniques and practices within the context of C2 communication should be considered. Blueteams should take the appropriate steps to recognize and prevent potential C2 network traffic flow. The following are some steps to be taken:
+
+* To determine whether the known C2 tools are available on systems
+
+* Blocking C2 server IP addresses from Cyber Threat Intelligence sources through security products such as Firewall
+
+* To detect network traffic that may be C2 communication with Network Security Monitoring on the system
+
+The sixth phase of the Cyber Kill Chain, the "Command and Control (C2)" step, is discussed in this section, along with some activities that attackers may take and some measures that Blueteams may employ at this stage. The topic of "Actions on Objectives" is explained in the following section.
